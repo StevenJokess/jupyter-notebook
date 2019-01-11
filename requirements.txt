@@ -1,0 +1,6 @@
+jupyter
+RISE
+numpy
+pandas
+pillow
+requests
