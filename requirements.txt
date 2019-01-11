@@ -3,4 +3,5 @@ RISE
 numpy
 pandas
 pillow
+matplotlib
 requests
