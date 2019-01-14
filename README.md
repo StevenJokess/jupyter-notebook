@@ -10,7 +10,6 @@
 + pillow
 + requests
 + matplotlib
-+ to be continue ...
 
 ### 部署
 1. 获取镜像
