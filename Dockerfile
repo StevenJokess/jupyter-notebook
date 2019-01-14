@@ -15,5 +15,6 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 RUN jupyter-nbextension install rise --py --sys-prefix
 RUN jupyter-nbextension enable rise --py --sys-prefix
+RUN jupyter notebook --generate-config
 EXPOSE 8888
 ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--port=8888", "--allow-root"]

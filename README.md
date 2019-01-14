@@ -9,6 +9,7 @@
 + pandas
 + pillow
 + requests
++ matplotlib
 + to be continue ...
 
 ### 部署
@@ -26,27 +27,22 @@ $ cd jupyter-notebook && docker build -t jupyter-notebook .
 
 2. 运行镜像
 ```
-$ docker run --name jupyter -p 10088:8888 -d jupyter-notebook
+$ docker run --name jupyter -p 10088:8888 -v jupyter-dir:/home/ -d jupyter-notebook
 ```
 3. 进入容器
 ```
 $ docker exec -it jupyter bash
 ```
-4. 生成 jupyter 配置文件
-```
-$ jupyter notebook --generate-config
-Writing default config to: /root/.jupyter/jupyter_notebook_config.py
-```
-5. 设置jupyter的登陆密码
+4. 设置jupyter的登陆密码
 ```
 $ jupyter notebook password
 Enter password:
 Verify password:
 [NotebookPasswordApp] Wrote hashed password to /root/.jupyter/jupyter_notebook_config.json
 ```
-6. 退出容器, 重启容器服务
+5. 退出容器, 重启容器服务
 ```
 $ exit
 $ docker restart jupyter
 ```
-7. 访问浏览器 http://127.0.0.1:10088/ 见证奇迹的时刻，127.0.0.1 要替换成你的 ip
+6. 访问浏览器 http://127.0.0.1:10088/ 见证奇迹的时刻，127.0.0.1 要替换成你的 ip
