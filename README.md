@@ -26,7 +26,7 @@ $ cd jupyter-notebook && docker build -t jupyter-notebook .
 
 2. 运行镜像
 ```
-$ docker run --name jupyter -p 10088:8888 -v jupyter-dir:/home/ -d jupyter-notebook
+$ docker run --name jupyter -p 10088:8888 --restart=always -v jupyter-dir:/home/ -d jupyter-notebook
 ```
 3. 进入容器
 ```
