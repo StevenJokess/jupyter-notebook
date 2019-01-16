@@ -45,3 +45,20 @@ $ exit
 $ docker restart jupyter
 ```
 6. 访问浏览器 http://127.0.0.1:10088/ 见证奇迹的时刻，127.0.0.1 要替换成你的 ip
+
+### 使用 Caddy 作为反向代理
+```
+# /etc/caddy/Caddyfile
+www.yourdomain.com:80, www.yourdomain.com:443 {
+    tls youremail@126.com
+    gzip
+    proxy / localhost:10088 {
+        header_upstream Connection {>Connection}
+        header_upstream Upgrade {>Upgrade}
+        header_upstream Host {host}
+        header_upstream X-Real-IP {remote}
+        header_upstream X-Forwarded-For {remote}
+        header_upstream X-Forwarded-Proto {scheme}
+    }
+}
+```
