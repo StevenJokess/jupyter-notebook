@@ -1,5 +1,5 @@
 # jupyter-notebook
-把jupyter-notebook装进docker里
+把 jupyter-notebook 装进 docker 里
 
 ### Jupyter
 + [RISE](https://github.com/damianavila/RISE) (制作网页 PPT )
