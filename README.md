@@ -16,7 +16,7 @@
 - 方案一: 从阿里云上拉取 Jupyter 镜像（推荐）
 ```
 $ docker pull registry.cn-hangzhou.aliyuncs.com/diy/jupyter-notebook
-$ docker tag registry-internal.cn-hangzhou.aliyuncs.com/diy/jupyter-notebook:[TAG] jupyter-notebook:latest  # 镜像重命名
+$ docker tag registry.cn-hangzhou.aliyuncs.com/diy/jupyter-notebook:[TAG] jupyter-notebook:latest  # 镜像重命名
 ```
 - 方案二: 克隆 + 编译, 得到 Jupyter 镜像（时间比较长）
 ```
