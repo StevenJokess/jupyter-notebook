@@ -20,7 +20,7 @@ $ docker tag registry.cn-hangzhou.aliyuncs.com/diy/jupyter-notebook:[TAG] jupyte
 ```
 - 方案二: 克隆 + 编译, 得到 Jupyter 镜像（时间比较长）
 ```
-$ git clone https://github.com/hugoxia/jupyter-notebook.git
+$ git clone https://github.com/xiayuguo/jupyter-notebook.git
 $ cd jupyter-notebook && docker build -t jupyter-notebook .
 ```
 
